@@ -1,0 +1,53 @@
+<div class="container">
+  <br>
+  <h1 style="text-align: center">Registro de Bodegas</h1>
+  <br>
+  <br>
+
+  <div class="row">
+
+    <div class="col-sm-6" >
+
+      <div class="form-group" >
+
+        <label  class="col-form label"><strong>Nombre:</strong></label>
+        <input  class="form-control"
+                placeholder="Ingrese nombre"
+                [(ngModel)]="nuevaBodega.nombre" type="text">
+        <label  class="col-form label"><strong>Dirección:</strong></label>
+        <input  class="form-control"
+                placeholder="Ingrese direccion"
+                [(ngModel)]="nuevaBodega.direccion" type="text">
+        <label  class="col-form label"><strong>Capacidad:</strong></label>
+        <input  class="form-control"
+                placeholder="Ingrese capacidad"
+                [(ngModel)]="nuevaBodega.capacidadEnToneladas" type="number">
+
+      </div>
+
+      <button class="btn btn-outline-success" (click)="crearBodega()" >Crear Bodega</button>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <h3>Bodegas</h3>
+
+  <hr>
+
+  <div  class="row">
+    <div  *ngFor="let bodega of bodegas">
+      <div class="col-md-6 ">
+        <div  class="card" style="width: 15rem;">
+          <div  class="card-block" >
+            <h4 style="text-align: center;" class="card-title" >{{ bodega.nombre }}</h4>
+            <p><strong>Nombre: </strong>{{ bodega.nombre }}</p>
+            <p><strong>Direccion: </strong> {{ bodega.direccion }}</p>
+            <p><strong>Capacidad: </strong>{{ bodega.capacidadEnToneladas }} <small>toneladas</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

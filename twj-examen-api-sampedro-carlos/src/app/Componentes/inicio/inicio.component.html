@@ -1,0 +1,24 @@
+<div class="container">
+
+  <br>
+  <br>
+  <br>
+  <h1 style="text-align: center">Peliculas</h1>
+  <hr>
+  <button class="btn btn-outline-success" (click)="cargarPeliculas()">Cargar Peliculas</button>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-4"
+         *ngFor="let pelicula of peliculas;let i = index;">
+
+      <app-pelicula [pelicula]="pelicula"></app-pelicula>
+
+
+    </div>
+
+
+  </div>
+
+</div>

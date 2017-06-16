@@ -1,0 +1,12 @@
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top" [src]="pelicula.poster">
+  <div class="card-block">
+    <h4 class="card-title">{{pelicula.show_title}}</h4>
+    <p class="card-text">{{pelicula.summary}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{pelicula.category}}</li>
+    <li class="list-group-item">{{pelicula.rating}} <small> <strong>rating</strong></small></li>
+    <li class="list-group-item">{{pelicula.runtime}}</li>
+  </ul>
+</div>
